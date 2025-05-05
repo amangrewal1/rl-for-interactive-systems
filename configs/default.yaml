@@ -1,0 +1,47 @@
+env:
+  n_items: 10
+  context_dim: 16
+  horizon: 200
+  satiation_rate: 0.35
+  recovery_rate: 0.05
+  drift_scale: 0.01
+  noise_std: 0.1
+
+bandit:
+  alpha: 1.0
+  reg: 1.0
+
+dqn:
+  hidden: [128, 128]
+  gamma: 0.95
+  lr: 3.0e-4
+  batch_size: 128
+  buffer_size: 50000
+  target_update: 500
+  warmup: 1000
+  train_every: 4
+
+ppo:
+  hidden: [128, 128]
+  gamma: 0.95
+  gae_lambda: 0.95
+  clip_eps: 0.2
+  lr: 3.0e-4
+  epochs: 4
+  batch_size: 64
+  rollout: 1024
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+
+exploration:
+  eps_start: 1.0
+  eps_end: 0.05
+  eps_decay_steps: 20000
+  boltzmann_temp: 1.0
+  ucb_c: 2.0
+
+shaping:
+  diversity_weight: 0.1
+  novelty_weight: 0.1
+  gamma: 0.95
