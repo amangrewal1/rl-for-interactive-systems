@@ -1,0 +1,7 @@
+# PPO clip-ratio sweep
+name: ppo_sweep
+base: default
+sweep:
+  clip_ratio: [0.1, 0.15, 0.2, 0.25, 0.3]
+  lr: [1.0e-4, 3.0e-4, 1.0e-3]
+seeds: 5
