@@ -1,0 +1,3 @@
+# Tuned bandits
+alpha: 0.9
+c: 2.0
