@@ -1,0 +1,4 @@
+# Tuned DQN
+lr: 3e-4
+batch: 128
+gamma: 0.99
