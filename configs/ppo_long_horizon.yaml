@@ -1,0 +1,8 @@
+# PPO long horizon
+horizon: 500
+lr: 1.0e-4
+clip_ratio: 0.15
+gamma: 0.99
+gae_lambda: 0.95
+entropy_coef: 0.01
+epochs: 10
