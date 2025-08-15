@@ -329,3 +329,9 @@ Conversational Recommender Systems.* KDD 2016.
 
 [8] Mnih, V., et al. (2015). *Human-level control through deep
 reinforcement learning.* Nature 518.
+
+
+## Figures
+
+See `results/figures/` after running
+`python -m experiments.plot results/bench.json --out results/figures`.
