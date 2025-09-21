@@ -1,0 +1,9 @@
+# DQN tuned
+lr: 3.0e-4
+batch_size: 128
+buffer_size: 100000
+target_update_freq: 1000
+eps_start: 1.0
+eps_end: 0.05
+eps_decay_steps: 10000
+gamma: 0.99
