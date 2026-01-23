@@ -56,3 +56,9 @@ configs/default.yaml  default hyperparameters
 
 See `report/report.md` for the full writeup: problem formulation, methods,
 experiments, results, and discussion.
+
+
+## Reproducing results
+
+All figures in the report are produced by `experiments/run_all.py` followed by
+`experiments/plot.py` on the produced JSON. Seeds are fixed via `configs/default.yaml`.
