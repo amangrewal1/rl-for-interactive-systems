@@ -1,5 +1,7 @@
 # Reinforcement Learning for Interactive Systems
 
+![tests](https://github.com/amangrewal1/rl-for-interactive-systems/actions/workflows/test.yml/badge.svg) ![license](https://img.shields.io/badge/license-MIT-blue)
+
 Reinforcement learning agents that optimize interactive user experiences in a
 simulated recommendation environment. Covers contextual bandits, deep Q-learning,
 and PPO, with pluggable exploration strategies, potential-based reward shaping,
