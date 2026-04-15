@@ -8,6 +8,26 @@ and PPO, with pluggable exploration strategies, potential-based reward shaping,
 and an evaluation suite combining quantitative metrics and human-in-the-loop
 feedback.
 
+## Results (8,000-step training, per-step reward)
+
+| Agent    | Mean reward (last 2k steps) | Std reward | Total reward |
+|----------|----------------------------:|-----------:|-------------:|
+| **LinUCB**   | **+0.073**                  |  0.176     |   **+516.2** |
+| **Thompson** | **+0.081**                  |  0.179     |   **+495.0** |
+| DQN      |      +0.003                  |  0.298     |     +19.7    |
+| PPO      |      +0.008                  |  0.315     |     +34.7    |
+
+On this non-stationary environment, contextual bandits (LinUCB, Thompson) **beat
+deep RL by 10×+ on cumulative reward** with this step budget. Deep methods need
+significantly longer training to close the gap — the environment's short
+horizons and non-stationary user state reward the bandits' closed-form updates.
+
+![learning curves across four RL agents](results/agent_comparison.png)
+
+*Per-step reward smoothed over 400 steps. LinUCB and Thompson adapt quickly;
+DQN's exploration is too slow for this horizon; PPO struggles with the
+non-stationary state signal.*
+
 ## Setup
 
 ```bash
